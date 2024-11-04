@@ -1,0 +1,96 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('christopher-gower-m_HRfLhgABo-unsplash.jpg'); /* Replace with correct path */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: lightblue; /* Light blue background for the navigation bar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Increased padding for better spacing */
+}
+
+/* Sidebar for mobile navigation */
+.Sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden off-screen */
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 213, 255, 0.183) /* 25% opacity red */;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease; /* Smooth transition */
+}
+
+.Sidebar.active {
+    right: 0; /* Show sidebar */
+}
+
+.Sidebar a {
+    color: black;
+    padding: 15px 10px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.Sidebar a:hover {
+    background-color: none;
+    border-radius: 3px;
+}
+
+/* Top navigation for larger screens */
+ul.topNav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-start; /* Align all top nav items to the left */
+    flex-grow: 1; /* Allow the topNav to grow and take available space */
+}
+
+ul.topNav li {
+    margin-left: 30px; /* Adjust spacing between items */
+}
+
+ul.topNav a {
+    text-decoration: none;
+    color: black;
+    padding: 12px 15px; /* Increased padding for better click area */
+    transition: background-color 0.3s;
+    font-size: 16px; /* Set font size */
+}
+
+ul.topNav a:hover {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Aligning the first child to the right */
+ul.topNav .firstChild {
+    margin-left: auto; /* Push the first child to the right */
+    font-weight: bold; /* Make the first child stand out */
+    font-size: 18px; /* Slightly larger font for the first child */
+}
+
+/* Remove mobile specific styles */
